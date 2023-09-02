@@ -1,0 +1,54 @@
+// set the colors of the header using the light/dark mode setting and
+// the color variables, give it some spacing, and set the font
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import './variables';
+
+
+.header {
+    font-family: $font-primary;
+    font-size: $font-size-primary;
+    padding: $spacing-tertiary;
+    padding-left: $spacing-primary !important;
+    padding-right: $spacing-primary;
+}
+#nav-brand {
+        font-family: $font-secondary;
+        font-style: italic;
+        font-size: $font-size-header;
+}
+.link-box {
+    font-family: $font-secondary;
+    font-size: $font-size-secondary;
+    padding: $spacing-tertiary;
+    padding-left: $spacing-primary;
+    padding-right: $spacing-primary;
+    border-radius: $border-radius-primary;
+    transition: background-color $transition-primary;
+    &:hover {
+        // use an if else statement and check if the background color is light or dark
+        // if it is light, then set the background color to the dark color
+        // if it is dark, then set the background color to the light color
+        @if (background-color == map-get($light, body)) {
+            background-color: map-get($dark, body) !important;
+            color: map-get($dark, text) !important;
+            & * {
+                color: map-get($dark, text) !important;
+            }
+        } @else {
+            background-color: map-get($light, body) !important;
+            color: map-get($light, text) !important;
+            & * {
+                color: map-get($light, text) !important;
+            }
+        }
+    }
+}
+.logo {
+    max-width: 100px;
+    height: 50px;
+}
+.theme{
+    max-width: 25px;
+    height: 25px;
+}

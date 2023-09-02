@@ -1,0 +1,76 @@
+// universal scss styles (fonts, colors, etc.)
+// get font from google fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+// set font variables
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Open Sans', sans-serif, bold;
+$font-tertiary: 'Open Sans', sans-serif;
+
+// set font size variables
+$font-size-primary: 1.6rem;
+$font-size-secondary: 1.4rem;
+$font-size-header: 2.4rem;
+
+// set spacing variables
+$spacing-primary: 1.5rem;
+$spacing-secondary: 1.0rem;
+$spacing-tertiary: .5rem;
+
+// set border radius variables
+$border-radius-primary: 0.4rem;
+$border-radius-secondary: 0.4rem;
+$border-radius-tertiary: 0.4rem;
+
+// set transition variables
+$transition-primary: all 0.3s ease-in-out;
+$transition-secondary: all 0.3s ease-in-out;
+$transition-tertiary: all 0.3s ease-in-out;
+
+// set win and loss and tie variables
+$win: #1a7e31;
+$loss: #6a0f18;
+$tie: grey;
+
+// set button colors
+$button-primary: blue;
+$button-secondary: #6c757d;
+$button-tertiary: #28a745;
+
+// Dark colors
+$dark: (
+  body: #343a40,
+  text: #f8f9fa,
+);
+
+// Light colors
+$light: (
+body: #f8f9fa,
+text: #343a40,
+);
+
+// .dark-mode {
+//   @include styles("darkTheme");
+// }
+
+// .light-mode {
+//   @include styles("lightTheme");
+// }
+
+// .dark {
+//   background-color: map-get($dark, body);
+//   color: map-get($dark, text);
+//   border-color: map-get($dark, body) !important;
+// }
+// .dark * {
+//   color: map-get($dark, text);
+//   border-color: map-get($dark, body) !important;
+// }
+
+
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+
